@@ -6,7 +6,7 @@ import { FaGithub, FaXTwitter } from "react-icons/fa6";
 export default function Hero() {
   return (
     <>
-      <div className="flex h-screen lg:flex-row flex-col md:flex-row p-10 w-full gap-4 items-center">
+      <div className="flex h-screen lg:flex-row flex-col md:flex-row lg:p-10 md:p-10 p-10 pt-16 w-full gap-4 items-center">
         <div className="flex-[1] w-full flex flex-col gap-3">
           <h1 className="text-5xl font-bold text-white">
             HI, I AM
