@@ -27,10 +27,14 @@ export function AboutM() {
             my technical expertise.
           </p>
           <div className="flex gap-2">
-            <div className="rounded-full flex gap-2 bg-[#D3E97A] items-center p-2 text-black font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">
+            <Link
+              className="rounded-full flex gap-2 bg-[#D3E97A] items-center p-2 text-black font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out"
+              href={"/AY-Resume-Minimal-Type.pdf"}
+              download={true}
+            >
               <p>DOWNLOAD RESUME</p>
               <FaDownload />
-            </div>
+            </Link>
             <div className="rounded-full flex items-center justify-center bg-[#222222] p-2 font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">
               <Link href={"https://x.com/OluwatolaAyomi4"}>
                 <FaXTwitter className="h-6 w-6 fill-[#D3E97A]" />
@@ -54,23 +58,36 @@ export function Skills() {
       <section className="text-white py-16 px-10 md:px-8 lg:px-16">
         <div className="flex flex-col md:flex-row gap-4 justify-between">
           <div>
-            <h2 className="text-4xl md:text-6xl lg:text-6xl font-bold uppercase tracking-tight">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight">
               My Capabilities
             </h2>
           </div>
           <div>
             <p className="text-[#C7C7C7]">
-                Here are some of the technologies I have worked with:
+              Here are some of the technologies I have worked with:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-                {["JavaScript", "TypeScript", "Go", "Solidity", "Rust", "React", "Next", "Nest", "Tailwind", "Node", "Supabase", "TeamWork"].map((skill, index) => (
-                    <div 
-                        key={index} 
-                        className="bg-[#222222] p-4 rounded-full flex items-center justify-center text-center hover:bg-[#D3E97A] hover:text-black transform hover:scale-110 transition-all duration-300 ease-in-out"
-                    >
-                        <p className="text-lg font-semibold">{skill}</p>
-                    </div>
-                ))}
+              {[
+                "JavaScript",
+                "TypeScript",
+                "Go",
+                "Solidity",
+                "Rust",
+                "React",
+                "Next",
+                "Nest",
+                "Tailwind",
+                "Node",
+                "Supabase",
+                "TeamWork",
+              ].map((skill, index) => (
+                <div
+                  key={index}
+                  className="bg-[#222222] p-4 rounded-full flex items-center justify-center text-center hover:bg-[#D3E97A] hover:text-black transform hover:scale-110 transition-all duration-300 ease-in-out"
+                >
+                  <p className="text-lg font-semibold">{skill}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -79,6 +96,53 @@ export function Skills() {
   );
 }
 
-export function Experience(){
-    
+export function Experience() {
+    return (
+        <>
+          <section className="text-white py-16 px-10 md:px-8 lg:px-16">
+            <div className="flex flex-col md:flex-row gap-4 justify-between">
+              <div>
+                <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight">
+                  My Experience
+                </h2>
+              </div>
+              <div className="flex flex-col gap-2">
+                {[
+                    {
+                        position: "Fullstack Developer",
+                        company: "Digivo",
+                        achievements: [
+                            "Implemented pixel-perfect responsive designs from Figma",
+                            "Developed and integrated backend services with 99.9% uptime",
+                            "Created and maintained multiple AI agents for customer service",
+                            "Improved application performance by 40%"
+                        ],
+                        duration: "Oct 2024 - Present"
+                    },
+                    {
+                        position: "Software Engineer",
+                        company: "Justice Inc.",
+                        achievements: [
+                            "Developed AI-powered web3 trading analysis platform",
+                            "Reduced analysis time by 60% through optimization",
+                            "Implemented real-time market data integration",
+                        ],
+                        duration: "March 2025 - Present"
+                    }
+                ].map((exp, index) => (
+                    <div key={index} className="bg-[#222222] p-6 rounded-lg mb-4">
+                        <h3 className="text-xl font-bold text-[#D3E97A]">{exp.position}</h3>
+                        <p className="text-gray-300 mb-2">{exp.company} | {exp.duration}</p>
+                        <ul className="list-disc list-inside text-gray-400">
+                            {exp.achievements.map((achievement, i) => (
+                                <li key={i} className="mb-1">{achievement}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+    )
 }

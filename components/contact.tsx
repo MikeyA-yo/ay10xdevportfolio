@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left Side: Contact Info */}
           <div className="flex flex-col space-y-8">
-            <h2 className="text-5xl md:text-6xl font-bold uppercase tracking-tight">LET'S CONNECT</h2>
+            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight">LET'S CONNECT</h2>
             <p className="text-lg text-gray-300">
               Say hello at <a href="mailto:ayomideoluwatola1@gmail.com" className="text-[#D3E97A] hover:underline">ayomideoluwatola1@gmail.com</a>
             </p>

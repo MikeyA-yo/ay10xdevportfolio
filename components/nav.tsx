@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -10,7 +11,7 @@ export default function Nav() {
   return (
     <>
       <nav className="lg:flex hidden z-10 md:flex fixed w-full justify-between items-center p-4 backdrop-blur text-[#C7C7C7]">
-        <h2 className="text-xl font-bold">Oluwatola Ayomide</h2>
+        <Link href={"/"} className="text-xl font-bold">Oluwatola Ayomide</Link>
         <div className="flex gap-3">
           <a
             href="#about"
