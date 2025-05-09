@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMini: React.FC = () => {
   return (
-    <section id="about-mini" className="bg-black text-white py-16 px-10 md:px-8 lg:px-16">
+    <section id="about" className="bg-black text-white py-16 px-10 md:px-8 lg:px-16">
       <div className="container mx-auto flex flex-col md:flex-row items-start">
         <div className="md:w-1/3 mb-8 md:mb-0 md:pr-8">
           <h2 className="text-4xl md:text-6xl lg:text-6xl font-bold uppercase tracking-tight">
