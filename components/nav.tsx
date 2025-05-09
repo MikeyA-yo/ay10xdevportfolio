@@ -9,7 +9,7 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="lg:flex hidden md:flex fixed w-full justify-between items-center p-4 backdrop-blur text-[#C7C7C7]">
+      <nav className="lg:flex hidden z-10 md:flex fixed w-full justify-between items-center p-4 backdrop-blur text-[#C7C7C7]">
         <h2 className="text-xl font-bold">Oluwatola Ayomide</h2>
         <div className="flex gap-3">
           <a

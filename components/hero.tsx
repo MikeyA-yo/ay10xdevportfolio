@@ -29,7 +29,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="flex-[1] w-full flex items-center justify-center">
+        <div className="flex-[1] overflow-hidden w-full flex items-center justify-center">
           <Image
             src={"/portpic.jpg"}
             alt="Me"

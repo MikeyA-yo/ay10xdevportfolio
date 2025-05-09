@@ -72,9 +72,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row my-8 w-full max-w-4xl mx-auto text-gray-300"
+      className="rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row my-8 w-full max-w-6xl mx-auto text-gray-300"
     >
-      <div className="md:w-1/2 relative p-6 md:p-8 flex flex-col items-center justify-center">
+      <div className="md:w-1/2 relative p-2  flex flex-col items-center justify-center">
         {conceptual && (
           <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
             Conceptual Work
