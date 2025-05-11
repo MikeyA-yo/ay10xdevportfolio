@@ -15,17 +15,19 @@ export default async function sendMessage({
   name,
   email,
   message,
+  subject
 }: {
   name: any;
   email: any;
   message: any;
+  subject: any;
 }) {
   // const {name, email, message } = data;
   const mailoptions = {
     from: process.env.EMAIL_SENDER,
     to: process.env.EMAIL_RECEIVER,
     subject: `New Message from ${name}`,
-    text: `Name: ${name}\n Email: ${email}\n Message: ${message}`,
+    text: `Name: ${name}\n${typeof subject === "string" && subject.length > 0 && `subject:${subject}`}\n Email: ${email}\n Message: ${message}`,
   };
   await new Promise<string>((resolve, reject) => {
     transporter.sendMail(mailoptions, (e: any, info: any) => {
