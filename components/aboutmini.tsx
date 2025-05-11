@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const AboutMini: React.FC = () => {
@@ -23,12 +24,12 @@ const AboutMini: React.FC = () => {
             contributing to the developer community. Always eager to take on challenging projects 
             and expand my technical expertise.
           </p>
-          <a
+          <Link
             href="/about" 
             className="text-sm font-medium text-[#D3E97A] hover:text-green-300 transition-colors duration-300 border-b-2 border-green-400 pb-1"
           >
             MORE ABOUT ME
-          </a>
+          </Link>
         </div>
       </div>
     </section>

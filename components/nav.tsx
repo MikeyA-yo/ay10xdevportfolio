@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { HiMenuAlt4 } from "react-icons/hi";
-
+import { Link as ScrollLink } from "react-scroll";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -13,24 +13,26 @@ export default function Nav() {
       <nav className="lg:flex hidden z-10 md:flex fixed w-full justify-between items-center p-4 backdrop-blur text-[#C7C7C7]">
         <Link href={"/"} className="text-xl font-bold">Oluwatola Ayomide</Link>
         <div className="flex gap-3">
-          <a
-            href="#about"
-            className=" font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
+          <ScrollLink
+            to="about"
+            smooth={true} duration={500}
+            className="cursor-pointer font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
           >
             About
-          </a>
+          </ScrollLink>
           <a
-            href="#projects"
+            href="/#projects"
             className=" font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
           >
             Work
           </a>
-          <a
-            href="#contact"
-            className=" font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
+          <ScrollLink
+            to="contact"
+            smooth={true} duration={500}
+            className="cursor-pointer font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
           >
             Contact
-          </a>
+          </ScrollLink>
         </div>
       </nav>
       <nav className="flex fixed z-20 lg:hidden md:hidden justify-between items-center p-2 backdrop-blur text-[#C7C7C7] w-full">
@@ -64,24 +66,26 @@ function Sidebar({ open }: { open: boolean }) {
           transition={{ duration: 0.5 }}
           className="fixed w-full pt-20 items-center  text-[#C7C7C7] flex flex-col z-10 gap-4 h-screen backdrop-blur-md "
         >
-          <a
-            href="#about"
-            className=" font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
+          <ScrollLink
+            to="about"
+            smooth={true} duration={500}
+            className="cursor-pointer font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
           >
             About
-          </a>
+          </ScrollLink>
           <a
-            href="#projects"
+            href="/#projects"
             className=" font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
           >
             Work
           </a>
-          <a
-            href="#contact"
-            className=" font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
+          <ScrollLink
+            to="contact"
+            smooth={true} duration={500}
+            className="cursor-pointer font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
           >
             Contact
-          </a>
+          </ScrollLink>
         </motion.div>
       )}
     </AnimatePresence>
