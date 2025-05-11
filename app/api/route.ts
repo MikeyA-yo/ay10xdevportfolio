@@ -2,15 +2,14 @@
 // import { NextRequest } from "next/server";
 import sendMessage from "./contact";
 
-export async function GET(req: Request, res:Response){
-    return Response.json({message:"hello ayo, you're probably the only one here"});
-}
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req:Request, res:Response){
+
+export async function POST(req:NextRequest, res:NextResponse){
     try {
         const data = await req.json();
         await sendMessage(data);
-        return  Response.json(data);
+        return  NextResponse.json({ status: "success", data });
     } catch (e) {
         console.log(e);
     }
