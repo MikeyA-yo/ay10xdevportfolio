@@ -36,7 +36,7 @@ export default function Nav() {
         </div>
       </nav>
       <nav className="flex fixed z-20 lg:hidden md:hidden justify-between items-center p-2 backdrop-blur text-[#C7C7C7] w-full">
-        <h2 className="text-xl font-bold">Oluwatola Ayomide</h2>
+      <Link href={"/"} className="text-xl font-bold">Oluwatola Ayomide</Link>
         {!isOpen && (
           <HiMenuAlt4
             onClick={() => setIsOpen(true)}
