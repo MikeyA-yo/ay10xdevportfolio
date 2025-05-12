@@ -3,7 +3,7 @@ import { FaXTwitter, FaGithub, FaDownload } from "react-icons/fa6";
 
 export function AboutM() {
   return (
-    <section className="bg-black text-white py-16 px-10 md:px-8 lg:px-16">
+    <section className="bg-black text-white py-16 px-6 md:px-8 lg:px-16">
       <div className="container mx-auto flex flex-col md:flex-row items-start">
         <div className="md:w-1/3 mb-8 md:mb-0 md:pr-8">
           <h2 className="text-4xl md:text-6xl lg:text-6xl font-bold uppercase tracking-tight">
@@ -26,7 +26,7 @@ export function AboutM() {
             community. Always eager to take on challenging projects and expand
             my technical expertise.
           </p>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <Link
               className="rounded-full flex gap-2 bg-[#D3E97A] items-center p-2 text-black font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out"
               href={"/AY-Resume-Minimal-Type.pdf"}
@@ -35,12 +35,12 @@ export function AboutM() {
               <p>DOWNLOAD RESUME</p>
               <FaDownload />
             </Link>
-            <div className="rounded-full flex items-center justify-center bg-[#222222] p-2 font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">
+            <div className="rounded-full h-10 w-10 flex items-center justify-center bg-[#222222] p-2 font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">
               <Link href={"https://x.com/OluwatolaAyomi4"}>
                 <FaXTwitter className="h-6 w-6 fill-[#D3E97A]" />
               </Link>
             </div>
-            <div className="rounded-full flex items-center justify-center bg-[#222222] p-2 font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">
+            <div className="rounded-full h-10 w-10 flex items-center justify-center bg-[#222222] p-2 font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">
               <Link href={"https://github.com/MikeyA-yo"}>
                 <FaGithub className="h-6 w-6 fill-[#D3E97A]" />
               </Link>
