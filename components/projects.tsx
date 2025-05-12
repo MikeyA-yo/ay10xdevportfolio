@@ -28,6 +28,14 @@ const projects: ProjectCardProps[] = [
         stack: ['Solidity', 'Tailwind CSS', 'TypeScript'],
         liveDemoLink: 'https://cryptovault-five.vercel.app/',
         githubLink:'https://github.com/MikeyA-yo/cryptovault'
+    }, 
+    {
+      image:'/aysh.png',
+      title: 'AYSHELL',
+      description: 'An interactive fast shell  that allows users to run commands in a terminal-like environment. Has some utility commands built in.',
+      stack:['Golang', 'React (Frontend docs)'],
+      liveDemoLink: 'https://ayshell-guide.vercel.app/',
+      githubLink: 'https://github.com/MikeyA-yo/ayshell-guide'
     }
 ]
 export default function Projects(){
