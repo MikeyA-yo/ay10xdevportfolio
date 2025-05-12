@@ -36,7 +36,7 @@ export default function Projects(){
             <section id="projects" className="w-full flex p-10 flex-col">
                 <div>
                 <h3 className='text-white font-bold text-2xl'>FEATURED PROJECTS</h3>
-                <p className='text-gray-400 text-sm'>Here are some of my projects that I have worked on, showcasing my skills.</p>
+                <p className='text-gray-400 text-sm'>Here are some of my projects that I have worked on.</p>
                 </div>
                 <div className="flex flex-col gap-10 mt-10">
                     {projects.map((project, index) => (

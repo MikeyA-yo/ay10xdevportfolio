@@ -11,10 +11,6 @@ const AboutMini: React.FC = () => {
           </h2>
         </div>
         <div className="md:w-2/3">
-          <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4">
-            I am a full-stack developer, with experience in web2,web3 and desktop apps.
-            Has Systems Engineering background.
-          </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
             I am a full-stack developer specializing in web and web3 applications. My core 
             tech stack includes JavaScript, TypeScript, Golang, and Solidity, with a growing 
