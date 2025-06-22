@@ -128,7 +128,19 @@ export function Experience() {
                             "Implemented real-time market data integration",
                         ],
                         duration: "March 2025 - Present"
-                    }
+                    },
+                    {
+                    position: "Core Tech Engineer",
+                    company: "Freepass Africa",
+                    achievements: [
+                      "Collaborated with a senior developer to architect and build the IoT core platform",
+                      "Implemented M2M streaming using MQTT, HTTPS, and LoRaWAN protocols",
+                      "Developed scalable backend services for real-time device communication",
+                      "Integrated secure authentication and data encryption for IoT devices",
+                      "Optimized system for high-throughput and low-latency data streaming"
+                    ],
+                    duration: "Jun 2025 - Present"
+                  }
                 ].map((exp, index) => (
                     <div key={index} className="bg-[#222222] p-6 rounded-lg mb-4">
                         <h3 className="text-xl font-bold text-[#D3E97A]">{exp.position}</h3>
