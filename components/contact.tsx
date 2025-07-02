@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               Say hello at <a href="mailto:ayomideoluwatola1@gmail.com" className="text-[#D3E97A] hover:underline">ayomideoluwatola1@gmail.com</a>
             </p>
             <p className="text-lg text-gray-300">
-              For more info, here's my <a href="#" className="text-[#D3E97A] hover:underline">resume</a>
+              For more info, here's my <a href="/AY-Resume-Minimal-Type.pdf" className="text-[#D3E97A] hover:underline">resume</a>
             </p>
             <div className="flex space-x-6">
               <a href="https://www.linkedin.com/in/ayomide-oluwatola-943801315/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D3E97A] transition-colors duration-300">
