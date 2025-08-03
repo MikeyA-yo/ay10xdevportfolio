@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll";
+
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -89,5 +90,20 @@ function Sidebar({ open }: { open: boolean }) {
         </motion.div>
       )}
     </AnimatePresence>
+  );
+}
+
+
+
+export function ScrollLinkContact({ children }: { children: React.ReactNode }) {
+  return (
+    <ScrollLink
+      to="contact"
+      smooth={true}
+      duration={500}
+      className="cursor-pointer font-bold hover:text-[#D3E97A] transition-all duration-300 ease-in-out"
+    >
+      {children}
+    </ScrollLink>
   );
 }
