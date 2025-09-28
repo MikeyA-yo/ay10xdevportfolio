@@ -14,6 +14,14 @@ const projects: ProjectCardProps[] = [
         githubLink: 'https://github.com/MikeyA-yo/anonyline'
     },
     {
+      image:'/ayscript.jpg',
+      title: 'AYScript',
+      description:'AYScript is a simple programming language that transpiles to JavaScript. It is designed to be easy to learn and use, with a syntax that is similar to Python and JavaScript.',
+      stack: ['TypeScript', 'Golang', 'React (Frontend docs)'],
+      liveDemoLink:'https://ayscriptdocs.vercel.app/',
+      githubLink:'https://github.com/MikeyA-yo/ay-ts'
+    },
+    {
         image:'/bibleapp.png',
         title: 'Online Bible App',
         description: 'A web application that allows users to read the Bible online. Users can search for verses, read different translations, and save their favorite verses.',

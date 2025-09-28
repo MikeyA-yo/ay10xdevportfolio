@@ -14,8 +14,65 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oluwatola Ayomide",
-  description: "10x developer, building great products and solving real-world problems.",
+  title: "Oluwatola Ayomide | Full-Stack & Blockchain Developer",
+  description:
+    "Oluwatola Ayomide is a creative full-stack and blockchain developer building scalable web apps, smart contracts, and cloud-powered solutions that solve real-world problems.",
+  keywords: [
+    "Oluwatola Ayomide",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Web Development",
+    "Smart Contract Development",
+    "Blockchain Development",
+    "Cloud Computing",
+    "Decentralized Applications",
+    "Creative Developer",
+  ],
+  authors: [{ name: "Oluwatola Ayomide" }],
+  creator: "Oluwatola Ayomide",
+  publisher: "Oluwatola Ayomide",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ay10xdev.vercel.app",
+    siteName: "Oluwatola Ayomide Portfolio",
+    title: "Oluwatola Ayomide | Full-Stack & Blockchain Developer",
+    description:
+      "Explore the portfolio of Oluwatola Ayomide, a software engineer specializing in full-stack web development, blockchain, and cloud computing.",
+    images: [
+      {
+        url: "/og.png", // social preview image
+        width: 1200,
+        height: 630,
+        alt: "Oluwatola Ayomide - Full-Stack & Blockchain Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oluwatola Ayomide | Full-Stack & Blockchain Developer",
+    description:
+      "Creative developer building modern apps, smart contracts, and scalable cloud solutions.",
+    creator: "@https://x.com/OluwatolaAyomi4", 
+    images: ["/og.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  themeColor: "#0f172a", // dark professional tone, tweak if you want
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
