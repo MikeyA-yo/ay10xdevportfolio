@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Explore the portfolio of Oluwatola Ayomide, a software engineer specializing in full-stack web development, blockchain, and cloud computing.",
     images: [
       {
-        url: "/og.png", // social preview image
+        url: "/og2.svg", 
         width: 1200,
         height: 630,
         alt: "Oluwatola Ayomide - Full-Stack & Blockchain Developer",
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     title: "Oluwatola Ayomide | Full-Stack & Blockchain Developer",
     description:
       "Creative developer building modern apps, smart contracts, and scalable cloud solutions.",
-    creator: "@https://x.com/OluwatolaAyomi4", 
-    images: ["/og.png"],
+    creator: "@OluwatolaAyomi4", 
+    images: ["/og2.svg"],
   },
   robots: {
     index: true,
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
   themeColor: "#0f172a", // dark professional tone, tweak if you want
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
