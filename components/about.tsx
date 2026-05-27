@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 import { FaXTwitter, FaGithub, FaDownload } from "react-icons/fa6";
 
 export function AboutM() {
@@ -52,118 +55,129 @@ export function AboutM() {
   );
 }
 
+const skills = [
+  "JavaScript",
+  "TypeScript",
+  "Golang",
+  "Rust",
+  "Solidity",
+  "Move",
+  "React",
+  "Next.js",
+  "NestJS",
+  "Node.js",
+  "Tailwind",
+  "Supabase",
+  "MQTT",
+  "WebSockets",
+  "AI Agents",
+  "Git",
+];
+
 export function Skills() {
   return (
-    <>
-      <section className="text-white py-16 px-10 md:px-8 lg:px-16">
-        <div className="flex flex-col md:flex-row gap-4 justify-between">
-          <div>
-            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight">
-              My Capabilities
-            </h2>
-          </div>
-          <div>
-            <p className="text-[#C7C7C7]">
-              Here are some of the technologies I have worked with:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-              {[
-                "JavaScript",
-                "TypeScript",
-                "Go",
-                "Solidity",
-                "Rust",
-                "React",
-                "Next",
-                "Nest",
-                "Tailwind",
-                "Node",
-                "Supabase",
-                "TeamWork",
-              ].map((skill, index) => (
-                <div
-                  key={index}
-                  className="bg-[#222222] p-4 rounded-full flex items-center justify-center text-center hover:bg-[#D3E97A] hover:text-black transform hover:scale-110 transition-all duration-300 ease-in-out"
-                >
-                  <p className="text-lg font-semibold">{skill}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+    <section className="text-white py-16 px-10 md:px-8 lg:px-16">
+      <div className="flex flex-col md:flex-row gap-8 justify-between">
+        <div className="md:w-1/3">
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight">
+            My Capabilities
+          </h2>
+          <p className="text-[#C7C7C7] mt-3 text-sm">
+            Technologies I work with across the stack.
+          </p>
         </div>
-      </section>
-    </>
+        <div className="md:w-2/3 flex flex-wrap gap-3">
+          {skills.map((skill, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, scale: 0.75 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.04 }}
+              whileHover={{ scale: 1.1 }}
+              className="bg-[#1a1a1a] border border-gray-700 text-[#D3E97A] px-4 py-2 rounded-full text-sm font-semibold cursor-default hover:bg-[#D3E97A] hover:text-black transition-colors duration-200"
+            >
+              {skill}
+            </motion.span>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
+const experiences = [
+  {
+    position: "Software Engineer",
+    company: "Digivo LTD",
+    location: "Remote (Lagos, Nigeria)",
+    duration: "Oct 2024 - Present",
+    achievements: [
+      "Architected a B2B SaaS platform integrating autonomous AI Voice Agents and email automation workflows, facilitating client acquisition.",
+      "Engineered scalable backend systems to handle concurrent VoIP sessions and real-time data processing for AI agents.",
+      "Transformed high-fidelity Figma designs into responsive UIs using Next.js and React, focusing on seamless UX.",
+    ],
+  },
+  {
+    position: "CoreTech Engineer Intern",
+    company: "Freepass Africa",
+    location: "Remote (Lagos, Nigeria)",
+    duration: "Jun 2025 - Jan 2026",
+    achievements: [
+      "Designed and implemented core M2M infrastructure using MQTT protocols for low-latency data transmission between IoT devices, reducing cloud costs by 20%.",
+      "Developed robust API endpoints for mobile applications, optimizing payload sizes by 60% for low-bandwidth environments.",
+    ],
+  },
+  {
+    position: "Smart Contract Developer (Contract)",
+    company: "Bizflip",
+    location: "Remote (US)",
+    duration: "Jun 2025 - Mar 2026",
+    achievements: [
+      "Refactored Solidity codebases to improve gas efficiency by 50% and security, reducing transaction costs for marketplace users.",
+      "Delivered critical secure smart contract features for MVP launch within a strict 2-month deadline.",
+    ],
+  },
+];
+
 export function Experience() {
-    return (
-        <>
-          <section className="text-white py-16 px-10 md:px-8 lg:px-16">
-            <div className="flex flex-col md:flex-row gap-4 justify-between">
-              <div>
-                <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight">
-                  My Experience
-                </h2>
+  return (
+    <section className="text-white py-16 px-10 md:px-8 lg:px-16">
+      <div className="flex flex-col md:flex-row gap-8 justify-between">
+        <div className="md:w-1/3">
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tight">
+            My Experience
+          </h2>
+        </div>
+        <div className="md:w-2/3 flex flex-col gap-4">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.1 }}
+              className="bg-[#111111] border border-gray-800 p-6 rounded-xl"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                <h3 className="text-lg font-bold text-[#D3E97A]">{exp.position}</h3>
+                <span className="text-xs text-gray-500">{exp.duration}</span>
               </div>
-              <div className="flex flex-col gap-2">
-                {[
-                    {
-                        position: "Fullstack Developer",
-                        company: "Digivo",
-                        achievements: [
-                            "Implemented pixel-perfect responsive designs from Figma",
-                            "Developed and integrated backend services with 99.9% uptime",
-                            "Created and maintained multiple AI agents for customer service",
-                            "Improved application performance by 40%"
-                        ],
-                        duration: "Oct 2024 - Present"
-                    },
-                    {
-                        position: "Software Engineer",
-                        company: "Justice Inc.",
-                        achievements: [
-                            "Developed AI-powered web3 trading analysis platform",
-                            "Reduced analysis time by 60% through optimization",
-                            "Implemented real-time market data integration",
-                        ],
-                        duration: "March 2025 - Feb 2025"
-                    },
-                    {
-                    position: "Core Tech Engineer",
-                    company: "Freepass Africa",
-                    achievements: [
-                      "Collaborated with a senior developer to architect and build the IoT core platform",
-                      "Implemented M2M streaming using MQTT, HTTPS, and LoRaWAN protocols",
-                      "Developed scalable backend services for real-time device communication",
-                      "Integrated secure authentication and data encryption for IoT devices",
-                      "Optimized system for high-throughput and low-latency data streaming"
-                    ],
-                    duration: "Jun 2025 - Jan 2026"
-                  },
-                  {
-                    position: "Smart Contract Developer (Contract)",
-                    company: "Bizflip · Remote (US)",
-                    achievements: [
-                      "Refactored Solidity codebases to improve gas efficiency by 50% and security, reducing transaction costs for marketplace users",
-                      "Delivered critical secure smart contract features for MVP launch within a strict 2-month deadline"
-                    ],
-                    duration: "Jun 2025 - Mar 2026"
-                  }
-                ].map((exp, index) => (
-                    <div key={index} className="bg-[#222222] p-6 rounded-lg mb-4">
-                        <h3 className="text-xl font-bold text-[#D3E97A]">{exp.position}</h3>
-                        <p className="text-gray-300 mb-2">{exp.company} | {exp.duration}</p>
-                        <ul className="list-disc list-inside text-gray-400">
-                            {exp.achievements.map((achievement, i) => (
-                                <li key={i} className="mb-1">{achievement}</li>
-                            ))}
-                        </ul>
-                    </div>
+              <p className="text-sm text-gray-400 mb-4">
+                {exp.company} · {exp.location}
+              </p>
+              <ul className="space-y-2">
+                {exp.achievements.map((item, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-gray-300 leading-relaxed">
+                    <span className="text-[#D3E97A] mt-1 shrink-0">▸</span>
+                    {item}
+                  </li>
                 ))}
-              </div>
-            </div>
-          </section>
-        </>
-    )
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
