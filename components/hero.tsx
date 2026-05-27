@@ -60,7 +60,7 @@ export default function Hero() {
     <>
       <div className="flex h-screen lg:flex-row flex-col md:flex-row lg:p-10 md:p-10 p-10 pt-16 w-full gap-4 items-center">
         <SlideIn className="flex-[1] w-full flex flex-col gap-3">
-          <h1 className="text-5xl font-bold text-white">
+          <h1 className="text-3xl md:text-5xl font-bold text-white">
             HI, I AM
             <br /> OLUWATOLA AYOMIDE
           </h1>
