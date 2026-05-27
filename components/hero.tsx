@@ -1,9 +1,59 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { FadeIn, SlideIn } from "./animatecontainers";
 import { ScrollLinkContact } from "./nav";
+
+const roles = [
+  "Full-Stack Developer",
+  "Rust Developer",
+  "Smart Contract Dev",
+  "Web3 Builder",
+  "Systems Builder",
+];
+
+function TypewriterTagline() {
+  const [displayed, setDisplayed] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[roleIndex];
+    const speed = isDeleting ? 40 : 80;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayed(current.slice(0, displayed.length + 1));
+        if (displayed.length + 1 === current.length) {
+          setTimeout(() => setIsDeleting(true), 1400);
+        }
+      } else {
+        setDisplayed(current.slice(0, displayed.length - 1));
+        if (displayed.length - 1 === 0) {
+          setIsDeleting(false);
+          setRoleIndex((i) => (i + 1) % roles.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, roleIndex]);
+
+  return (
+    <p className="text-[#C7C7C7] text-lg min-h-[1.75rem]">
+      A professional{" "}
+      <span className="text-[#D3E97A] font-semibold">
+        {displayed}
+        <span className="animate-pulse">|</span>
+      </span>{" "}
+      passionate about building great products and solving real-world problems.
+    </p>
+  );
+}
 
 export default function Hero() {
   return (
@@ -14,10 +64,7 @@ export default function Hero() {
             HI, I AM
             <br /> OLUWATOLA AYOMIDE
           </h1>
-          <p className="text-[#C7C7C7]">
-            A professional fullstack web2 and web3 developer passionate about
-            building great products and solving real-world problems.
-          </p>
+          <TypewriterTagline />
           <div className="flex gap-2">
             <ScrollLinkContact>
               <div className="rounded-full flex gap-2 bg-[#D3E97A] items-center p-2 text-black font-bold cursor-pointer hover:bg-[#C7C7C7] transition-all duration-300 ease-in-out">

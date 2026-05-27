@@ -120,12 +120,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </p>
 
         <div className="mb-6">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">Project Info</h4>
-          <div className="border-t border-gray-700 pt-3">
-            <div className="flex justify-between items-center py-1">
-              <span className="text-sm text-gray-400">Stack</span>
-              <span className="text-sm text-right text-white font-medium">{stack.join(', ')}</span>
-            </div>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">Stack</h4>
+          <div className="flex flex-wrap gap-2 pt-1">
+            {stack.map((tech, i) => (
+              <span
+                key={i}
+                className="text-xs font-medium px-3 py-1 rounded-full bg-[#1a1a1a] border border-gray-700 text-[#D3E97A] hover:bg-[#D3E97A] hover:text-black transition-colors duration-200"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
 
