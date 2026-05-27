@@ -12,17 +12,17 @@ export function AboutM() {
         </div>
         <div className="md:w-2/3">
           <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4">
-            I am a full-stack developer, with experience in web2,web3 and
-            desktop apps. Has Systems Engineering background.
+            A full-stack developer with experience in web2, web3, systems
+            programming, and desktop apps. Systems Engineering background.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
             I am a full-stack developer specializing in web and web3
             applications. My core tech stack includes JavaScript, TypeScript,
-            Golang, and Solidity, with a growing interest in Rust. I build
-            robust applications using the MERN stack, NextJS, and NestJS
-            frameworks. Passionate about solving complex problems and creating
-            efficient, scalable solutions. When I'm not coding, I enjoy
-            exploring new technologies and contributing to the developer
+            Golang, Solidity, and Rust. I build robust applications using the
+            MERN stack, NextJS, and NestJS frameworks, and systems-level CLI
+            tools in Rust. Passionate about solving complex problems and
+            creating efficient, scalable solutions. When I'm not coding, I
+            enjoy exploring new technologies and contributing to the developer
             community. Always eager to take on challenging projects and expand
             my technical expertise.
           </p>
@@ -127,7 +127,7 @@ export function Experience() {
                             "Reduced analysis time by 60% through optimization",
                             "Implemented real-time market data integration",
                         ],
-                        duration: "March 2025 - Present"
+                        duration: "March 2025 - Feb 2025"
                     },
                     {
                     position: "Core Tech Engineer",
@@ -139,7 +139,16 @@ export function Experience() {
                       "Integrated secure authentication and data encryption for IoT devices",
                       "Optimized system for high-throughput and low-latency data streaming"
                     ],
-                    duration: "Jun 2025 - Present"
+                    duration: "Jun 2025 - Jan 2026"
+                  },
+                  {
+                    position: "Smart Contract Developer (Contract)",
+                    company: "Bizflip · Remote (US)",
+                    achievements: [
+                      "Refactored Solidity codebases to improve gas efficiency by 50% and security, reducing transaction costs for marketplace users",
+                      "Delivered critical secure smart contract features for MVP launch within a strict 2-month deadline"
+                    ],
+                    duration: "Jun 2025 - Mar 2026"
                   }
                 ].map((exp, index) => (
                     <div key={index} className="bg-[#222222] p-6 rounded-lg mb-4">

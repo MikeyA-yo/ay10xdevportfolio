@@ -12,13 +12,13 @@ const AboutMini: React.FC = () => {
         </div>
         <div className="md:w-2/3">
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
-            I am a full-stack developer specializing in web and web3 applications. My core 
-            tech stack includes JavaScript, TypeScript, Golang, and Solidity, with a growing 
-            interest in Rust. I build robust applications using the MERN stack, NextJS, and 
-            NestJS frameworks. Passionate about solving complex problems and creating efficient, 
-            scalable solutions. When I'm not coding, I enjoy exploring new technologies and 
-            contributing to the developer community. Always eager to take on challenging projects 
-            and expand my technical expertise.
+            I am a full-stack developer specializing in web and web3 applications. My core
+            tech stack includes JavaScript, TypeScript, Golang, Solidity, and Rust. I build
+            robust applications using the MERN stack, NextJS, and NestJS frameworks, and
+            systems-level tools in Rust. Passionate about solving complex problems and creating
+            efficient, scalable solutions. When I'm not coding, I enjoy exploring new technologies
+            and contributing to the developer community. Always eager to take on challenging
+            projects and expand my technical expertise.
           </p>
           <Link
             href="/about" 
