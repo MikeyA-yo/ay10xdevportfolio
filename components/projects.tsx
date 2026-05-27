@@ -44,6 +44,14 @@ const projects: ProjectCardProps[] = [
       stack:['Golang', 'React (Frontend docs)'],
       liveDemoLink: 'https://ayshell-guide.vercel.app/',
       githubLink: 'https://github.com/MikeyA-yo/ayshell-guide'
+    },
+    {
+      image: '/suirunner.png',
+      title: 'Sui-Runner',
+      description: 'A Rust-based CLI tool that simplifies development workflows for the Sui blockchain. Features project scaffolding, build/test automation with file-watching, network deployment, wallet management, and an interactive terminal UI dashboard.',
+      stack: ['Rust', 'Ratatui', 'Tokio', 'Clap'],
+      liveDemoLink: 'https://suirunner.vercel.app/',
+      githubLink: 'https://github.com/MikeyA-yo/sui-runner'
     }
 ]
 export default function Projects(){
