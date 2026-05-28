@@ -14,20 +14,15 @@ export function AboutM() {
           </h2>
         </div>
         <div className="md:w-2/3">
-          <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4">
-            A full-stack developer with experience in web2, web3, systems
-            programming, and desktop apps. Systems Engineering background.
-          </p>
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
-            I am a full-stack developer specializing in web and web3
-            applications. My core tech stack includes JavaScript, TypeScript,
-            Golang, Solidity, and Rust. I build robust applications using the
-            MERN stack, NextJS, and NestJS frameworks, and systems-level CLI
-            tools in Rust. Passionate about solving complex problems and
-            creating efficient, scalable solutions. When I'm not coding, I
-            enjoy exploring new technologies and contributing to the developer
-            community. Always eager to take on challenging projects and expand
-            my technical expertise.
+          <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-6">
+            Software Innovator &amp; Systems Engineer passionate about solving{" "}
+            <span className="text-[#D3E97A] font-semibold">complex technical challenges</span>{" "}
+            across the stack. Experienced in building next-gen solutions — from{" "}
+            <span className="text-[#D3E97A] font-semibold">AI-driven B2B automation tools</span>{" "}
+            to{" "}
+            <span className="text-[#D3E97A] font-semibold">custom programming languages</span>{" "}
+            and{" "}
+            <span className="text-[#D3E97A] font-semibold">decentralized finance (DeFi) protocols</span>.
           </p>
           <div className="flex items-center gap-2">
             <Link
