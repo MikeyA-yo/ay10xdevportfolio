@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ay10xdev.vercel.app"),
   title: "Oluwatola Ayomide | Full-Stack & Blockchain Developer",
   description:
     "Oluwatola Ayomide is a creative full-stack and blockchain developer building scalable web apps, smart contracts, and cloud-powered solutions that solve real-world problems.",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
       "Explore the portfolio of Oluwatola Ayomide, a software engineer specializing in full-stack web development, blockchain, and cloud computing.",
     images: [
       {
-        url: "/og2.svg", 
+        url: "/og.jpg",
         width: 1200,
         height: 630,
         alt: "Oluwatola Ayomide - Full-Stack & Blockchain Developer",
@@ -57,8 +58,8 @@ export const metadata: Metadata = {
     title: "Oluwatola Ayomide | Full-Stack & Blockchain Developer",
     description:
       "Creative developer building modern apps, smart contracts, and scalable cloud solutions.",
-    creator: "@OluwatolaAyomi4", 
-    images: ["/og2.svg"],
+    creator: "@OluwatolaAyomi4",
+    images: ["/og.jpg"],
   },
   robots: {
     index: true,
