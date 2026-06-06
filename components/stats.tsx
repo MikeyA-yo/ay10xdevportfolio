@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { useInView } from "motion/react";
 
@@ -14,6 +14,14 @@ const stats = [
 export default function Stats() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [animating, setAnimating] = useState(false);
+
+  useEffect(() => {
+    if (isInView) {
+      const t = setTimeout(() => setAnimating(true), 80);
+      return () => clearTimeout(t);
+    }
+  }, [isInView]);
 
   return (
     <section className="w-full px-10 py-12 border-t border-b border-gray-800">
@@ -21,10 +29,10 @@ export default function Stats() {
         {stats.map((stat, i) => (
           <div key={i} className="flex flex-col items-center gap-1">
             <span className="text-4xl md:text-5xl font-bold text-[#D3E97A]">
-              {isInView ? (
-                <CountUp end={stat.end} suffix={stat.suffix} duration={2} />
+              {animating ? (
+                <CountUp start={0} end={stat.end} suffix={stat.suffix} duration={2} />
               ) : (
-                `0${stat.suffix}`
+                `${stat.end}${stat.suffix}`
               )}
             </span>
             <span className="text-sm text-gray-400 uppercase tracking-wider">
